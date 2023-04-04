@@ -1,0 +1,159 @@
+﻿@{
+    ViewBag.Title = "LinqKart";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+<html lang="zxx" class=" js no-touch" style="overflow: hidden;">
+<head>
+    <title>Carts</title>
+    
+   
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //custom-theme -->
+    <link href="~/webhava/bootstrap.css" rel="stylesheet" />
+    <link href="~/webhava/component.css" rel="stylesheet" />
+    <link href="~/webhava/export.css" rel="stylesheet" />
+    <link href="~/webhava/style.css" rel="stylesheet" />
+    <link href="~/webhava/style_grid.css" rel="stylesheet" />
+    <link href="~/webhava/font-awesome.css" rel="stylesheet" />
+    <!-- font-awesome-icons -->
+    <link href="~/webhava/css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
+    </head>
+<body>
+    <!-- banner -->
+    <div class="inner_content_w3_agile_info">
+        <!-- /agile_top_w3_grids-->
+        <div class="agile_top_w3_grids" >
+            <ul class="ca-menu">
+                <li>
+                    <a href="#">
+
+                        <i class="fa fa-book" aria-hidden="true"></i>
+                        <div class="ca-content">
+                            <h4 class="ca-main">@ViewBag.toplamkitap</h4>
+                            <h3 class="ca-sub">Kitap Sayısı</h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <div class="ca-content">
+                            <h4 class="ca-main one">@ViewBag.toplamuye</h4>
+                            <h3 class="ca-sub one">Üye Sayısı</h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                        <div class="ca-content">
+                            <h4 class="ca-main two">@ViewBag.tutar</h4>
+                            <h3 class="ca-sub two">Kasadaki Tutar</h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-apple" aria-hidden="true"></i>
+                        <div class="ca-content">
+                            <h4 class="ca-main three">@ViewBag.emanetkitap</h4>
+                            <h3 class="ca-sub three">Ödünçteki Kitaplar</h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-list" aria-hidden="true"></i>
+                        <div class="ca-content">
+                            <h4 class="ca-main four">@ViewBag.toplamkategori</h4>
+                            <h3 class="ca-sub four">Kategori Sayımız</h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+
+                        <i class="fa fa-language" aria-hidden="true"></i>
+                        <div class="ca-content">
+                            <h4 class="ca-main">@ViewBag.aktifuye</h4>
+                            <h3 class="ca-sub">En Aktif Üye</h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-database" aria-hidden="true"></i>
+                        <div class="ca-content">
+                            <h4 class="ca-main one">@ViewBag.enfazlaokunankitap</h4>
+                            <h3 class="ca-sub one">En Çok Okunan Kitap</h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                        <div class="ca-content">
+                            <h4 class="ca-main two">@ViewBag.enfazlakitabiolanyazar</h4>
+                            <h3 class="ca-sub two">En fazla Kitabı Olan Yazar</h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-barcode" aria-hidden="true"></i>
+                        <div class="ca-content">
+                            <h4 class="ca-main three">@ViewBag.enbasariliyayinevi</h4>
+                            <h3 class="ca-sub three">En İyi Yayın Evi</h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-bitbucket" aria-hidden="true"></i>
+                        <div class="ca-content">
+                            <h4 class="ca-main four">@ViewBag.enbasarilipers</h4>
+                            <h3 class="ca-sub four">En Başarılı Personel</h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-diamond" aria-hidden="true"></i>
+                        <div class="ca-content">
+                            <h4 class="ca-main one">@ViewBag.toplammesajsayisi</h4>
+                            <h3 class="ca-sub one">Toplam Mesaj Sayısı</h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <div class="ca-content">
+                            <h4 class="ca-main two">@ViewBag.bugunkuemanetler</h4>
+                            <h3 class="ca-sub two">Bugünkü Emanetler</h3>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    
+    
+   
+
+  
+    <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+
+
+
+</body>
+</html>
+

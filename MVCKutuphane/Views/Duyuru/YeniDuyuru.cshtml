@@ -1,0 +1,21 @@
+﻿@model MVCKutuphane.Models.tblduyurular
+@{
+    ViewBag.Title = "YeniDuyuru";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <br />
+    <label>Duyuru Başlık</label>
+    @Html.TextBoxFor(m => m.KATEGORI, new { @class = "form-control" })
+    <br />
+    <label>Duyuru İçeriği</label>
+    @Html.TextBoxFor(m => m.ICERIK, new { @class = "form-control" })
+    <br />
+    <label>Duyuru Tarihi</label>
+    @Html.TextBoxFor(m => m.TARIH, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Duyuru Ekle</button>
+</form>
+

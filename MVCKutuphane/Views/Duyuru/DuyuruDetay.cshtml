@@ -1,0 +1,25 @@
+﻿@model MVCKutuphane.Models.tblduyurular
+@{
+    ViewBag.Title = "DuyuruDetay";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("DuyuruGuncelle", "Duyuru", FormMethod.Post))
+            {
+                <div>
+                    @Html.LabelFor(k => k.ID)
+                    @Html.TextBoxFor(k => k.ID, new { @class = "form-control" })
+                    <br />
+                    @Html.LabelFor(k => k.KATEGORI)
+                    @Html.TextBoxFor(k => k.KATEGORI, new { @class = "form-control" })
+                    <br />
+                    @Html.LabelFor(k => k.ICERIK)
+                    @Html.TextBoxFor(k => k.ICERIK, new { @class = "form-control" })
+                    <br />
+                    @Html.LabelFor(k => k.TARIH)
+                    @Html.TextBoxFor(k => k.TARIH, new { @class = "form-control" })
+                    <br />
+                    <button class="btn btn-warning"> Güncelle</button>
+                </div>
+            }
+

@@ -1,0 +1,35 @@
+﻿@using MVCKutuphane.Models
+@model List<tblduyurular>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+    string renk = "";
+}
+
+<h2>Duyurular</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>DUYURU ID</th>
+        <th>KATEGORİ</th>
+        <th>TARİH</th>
+        <th>İÇERİK</th>
+        <th>SİL</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        if (item.KATEGORI == "bla")
+        {
+            renk = "bg-info text-white"
+;
+        }
+        <tr>
+            <td>@item.ID</td>
+            <td class="@renk">@item.KATEGORI</td>
+            <td>@Convert.ToDateTime(item.TARIH).ToString("dd/MM/yyyy")</td>
+            <td><a href="/Duyuru/DuyuruDetay/@item.ID" class="btn btn-info">İçerik</a></td>
+            <td><a href="/Duyuru/DuyuruSil/@item.ID" class="btn btn-danger">Sil</a></td>
+        </tr>
+    }
+</table>
+<a href="/Duyuru/YeniDuyuru/" class="btn btn-primary">Yeni Duyuru Ekle</a>
+

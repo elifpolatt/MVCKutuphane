@@ -1,0 +1,34 @@
+﻿@model MVCKutuphane.Models.tblhareketler
+@{
+    ViewBag.Title = "OduncVer";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <br />
+    <div>
+        <label>Üye Seç</label>
+        @*@Html.TextBoxFor(k => k.UYE, new { @class = "form-control" })*@
+        @Html.DropDownListFor(k => k.tbluyeler.ID, (List<SelectListItem>)ViewBag.uyesec, new { @class = "form-control" })
+        <br />
+        <label>Kitap Seç </label>
+        @*@Html.TextBoxFor(k => k.KITAP, new { @class = "form-control" })*@
+        @Html.DropDownListFor(k => k.tblkitaplar.ID, (List<SelectListItem>)ViewBag.kitapsec, new { @class = "form-control" })
+        <br />
+        <label>Personel Seç</label>
+        @*@Html.TextBoxFor(k => k.PERSONEL, new { @class = "form-control" })*@
+        @Html.DropDownListFor(k => k.tblpersoneller.ID, (List<SelectListItem>)ViewBag.personelsec, new { @class = "form-control" })
+
+        <br />
+        <label>Kitap Alış Tarihi</label>
+        <input type="text" class="form-control" name="ALISTARIH" value="@DateTime.Now.ToShortDateString()" />
+        <br />
+        <label>Kitap İade Tarihi</label>
+        @*şimdinin tarihinden yedi gün sonrasının tarihinin gösterimi*@
+        <input type="text" class="form-control" name="IADETARIH" value="@DateTime.Now.AddDays(7).ToShortDateString()" />
+
+        <br />
+        <button class="btn btn-info">Kitabı Ödünç Ver</button>
+        <input type="hidden" value="False" name="ISLEMDURUM" />
+    </div>
+</form>

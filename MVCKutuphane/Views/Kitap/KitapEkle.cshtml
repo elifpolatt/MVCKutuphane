@@ -1,0 +1,34 @@
+﻿@model MVCKutuphane.Models.tblkitaplar
+@{
+    ViewBag.Title = "KitapEkle";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <br />
+    <div>
+        <label>Kitap Adı</label>
+        @Html.TextBoxFor(m => m.AD, new { @class = "form-control" })
+        <br />
+        <label>Kitap Kategori</label>
+        @Html.DropDownListFor(m => m.tblkategoriler.ID, (List<SelectListItem>)ViewBag.ktg, new { @class = "form-control" })
+        <br />
+        <label>Basım Yılı</label>
+        @Html.TextBoxFor(m => m.BASIMYIL, new { @class = "form-control" })
+        <br />
+        <label>Yazar Adı</label>
+        @Html.DropDownListFor(m => m.tblyazarlar.ID, (List<SelectListItem>)ViewBag.yzr, new { @class = "form-control" })
+        <br />
+        <label>Yayınevi</label>
+        @Html.TextBoxFor(m => m.YAYINEVI, new { @class = "form-control" })
+        <br />
+        <label>Sayfa Sayısı</label>
+        @Html.TextBoxFor(m => m.SAYFA, new { @class = "form-control" })
+
+    </div>
+    <button class="btn btn-info">Kitap Ekle</button>
+    
+    <input type="hidden" name="DURUM" value="True"/>
+</form>
+
+

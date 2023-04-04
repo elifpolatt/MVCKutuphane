@@ -1,0 +1,37 @@
+﻿@model MVCKutuphane.Models.tbluyeler
+@{
+    ViewBag.Title = "UyeGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+@using (Html.BeginForm("UyeGuncelle", "Uye", FormMethod.Post))
+{
+    <label>ID</label>
+    @Html.TextBoxFor(m=>m.ID, new {@class="form-control"})
+    <label>AD</label>
+    @Html.TextBoxFor(m => m.AD, new { @class = "form-control" })
+    <br />
+    <label>SOYAD</label>
+    @Html.TextBoxFor(m => m.SOYAD, new { @class = "form-control" })
+    <br />
+    <label>MAIL</label>
+    @Html.TextBoxFor(m => m.MAIL, new { @class = "form-control" })
+    <br />
+    <label>KULLANICI ADI</label>
+    @Html.TextBoxFor(m => m.KULLANICIADI, new { @class = "form-control" })
+    <br />
+    <label>ŞİFRE</label>
+    @Html.TextBoxFor(m => m.SIFRE, new { @class = "form-control" })
+    <br />
+    <label>FOTOĞRAF LİNK</label>
+    @Html.TextBoxFor(m => m.FOTOGRAF, new { @class = "form-control" })
+    <br />
+    <label>TELEFON</label>
+    @Html.TextBoxFor(m => m.TELEFON, new { @class = "form-control" })
+    <br />
+    <label>OKUL</label>
+    @Html.TextBoxFor(m => m.OKUL, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-warning">Güncelle</button>
+}

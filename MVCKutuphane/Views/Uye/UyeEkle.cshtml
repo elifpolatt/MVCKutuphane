@@ -1,0 +1,41 @@
+﻿@model MVCKutuphane.Models.tbluyeler
+@{
+    ViewBag.Title = "UyeEkle";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+<form class="form-group" method="post">
+    <br />
+    <div>
+        <label>AD</label>
+        @Html.TextBoxFor(m => m.AD, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.AD, "", new { @style = "color:green" })
+        <br />
+        <label>SOYAD</label>
+        @Html.TextBoxFor(m => m.SOYAD, new { @class = "form-control" })
+        <br />
+        <label>MAIL</label>
+        @Html.TextBoxFor(m => m.MAIL, new { @class = "form-control" })
+        <br />
+        <label>KULLANICI ADI</label>
+        @Html.TextBoxFor(m => m.KULLANICIADI, new { @class = "form-control" })
+        <br />
+        <label>ŞİFRE</label>
+        @Html.TextBoxFor(m => m.SIFRE, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.SIFRE, "", new { @style = "color:red" })
+
+        <br />
+        <label>FOTOĞRAF LİNK</label>
+        @Html.TextBoxFor(m => m.FOTOGRAF, new { @class = "form-control" })
+        <br />
+        <label>TELEFON</label>
+        @Html.TextBoxFor(m => m.TELEFON, new { @class = "form-control" })
+        <br />
+        <label>OKUL</label>
+        @Html.TextBoxFor(m => m.OKUL, new { @class = "form-control" })
+        <br />
+    </div>
+    <button class="btn btn-primary">Üye Ekle</button>
+</form>
+

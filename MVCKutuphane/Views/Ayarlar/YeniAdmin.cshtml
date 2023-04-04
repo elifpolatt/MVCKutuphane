@@ -1,0 +1,25 @@
+﻿@model MVCKutuphane.Models.tbladmin
+
+@{
+    ViewBag.Title = "YeniAdmin";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Yeni Admin Ekle</h2>
+
+<form class="form-group" method="post">
+    <br />
+    <div>
+        <label>Kullanıcı Adı</label>
+        @Html.TextBoxFor(m => m.KULLANICI, new { @class = "form-control" })
+        <br />
+        <label>Şifre</label>
+        @Html.TextBoxFor(m => m.SIFRE, new { @class = "form-control" })
+        <br />
+        <label>Yetki</label>
+        @Html.TextBoxFor(m => m.YETKI, new { @class = "form-control" })
+        <button class="btn btn-info">Admin Ekle</button>
+    </div>
+</form>
+
+

@@ -1,0 +1,80 @@
+﻿@using MVCKutuphane.Models
+@model List<tbladmin>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<!-- font-awesome icons -->
+<link rel="stylesheet" href="/admintema/plugins/fontawesome-free/css/all.min.css">
+<!-- //font-awesome icons -->
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+
+<table class="table table-bordered">
+
+    <tr>    
+        <th>ID</th>
+        <th>KULLANICI</th>
+        <th>YETKİ</th>
+
+        <th>SİL</th>
+        <th>DÜZENLE</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.KULLANICI</td>
+            <td>@item.YETKI</td>
+            <td>
+                <a class="btn btn-danger btn-sm" href="/Ayarlar/AdminSil/@item.ID">
+                    <i class="fas fa-trash">
+                    </i>
+                    Sil
+                </a>
+            </td>
+            <td>
+                <a class="btn btn-info btn-sm" href="/Ayarlar/AdminGetir/@item.ID">
+                    <i class="fas fa-pencil-alt">
+                    </i>
+                    Düzenle
+                </a>
+            </td>
+
+
+        </tr>
+
+    }
+
+</table>
+<a href="/Ayarlar/YeniAdmin/" class="btn btn-primary">Yeni Admin Ekle</a>
+
+
+
+@* Pop-up sayfası için kodlar: *@
+@*<button class="btn btn-primary" data-toggle="modal" data-target="#Modal1">Yeni Admin Ekle</button>
+    <div class="modal" id="Modal1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">
+                        Admin Ekleme Paneli
+                    </h2>
+                    <form method="post" action="/Ayarlar/YeniAdmin/">
+                        <div class="modal-body">
+                            <label>Kullanıcı Adı</label>
+                            <input type="text" name="KULLANICI" class="form-control" />
+                            <label>Şifre</label>
+                            <input type="text" name="SIFRE" class="form-control" />
+                            <label>Yetki</label>
+                            <input type="text" name="YETKI" class="form-control" />
+                        </div>
+                        <button class="btn btn-info">Kaydet</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>*@
+

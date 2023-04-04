@@ -1,0 +1,18 @@
+﻿@model MVCKutuphane.Models.tblkategoriler
+@{
+    ViewBag.Title = "KategoriGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<br />
+@using (Html.BeginForm("KategoriGuncelle","Kategori", FormMethod.Post))
+            {
+                <div class="form-group">
+                    @Html.LabelFor(m=>m.ID)
+                    @Html.TextBoxFor(m=>m.ID, new {@class= "form-control"})
+                <br />
+                    @Html.LabelFor(m=>m.AD)
+                    @Html.TextAreaFor(m=>m.AD, new { @class = "form-control" })
+                </div>
+                <button class="btn btn-warning">Güncelle</button>
+            }

@@ -1,0 +1,39 @@
+﻿@model MVCKutuphane.Models.tblkitaplar
+@{
+    ViewBag.Title = "KitapGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("KitapGuncelle", "Kitap", FormMethod.Post))
+{
+    <br />
+    <br />
+    <div>
+        <label>Kitap ID</label>
+        @Html.TextBoxFor(k => k.ID, new { @class = "form-control" })
+        <br />
+        <label>Kitap Adı</label>
+        @Html.TextBoxFor(k => k.AD, new { @class = "form-control" })
+        <br />
+        <label>Kitap Yazarı</label>
+        @Html.DropDownListFor(k => k.tblyazarlar.ID, (List<SelectListItem>)ViewBag.yzr, new { @class = "form-control" })
+        <br />
+        <label>Kategori</label>
+        @Html.DropDownListFor(k => k.tblkategoriler.ID, (List<SelectListItem>)ViewBag.ktg, new { @class = "form-control" })
+        <br />
+        <label>Basım Yılı</label>
+        @Html.TextBoxFor(k => k.BASIMYIL, new { @class = "form-control" })
+        <br />
+        <label>Yayınevi</label>
+        @Html.TextBoxFor(k => k.YAYINEVI, new { @class = "form-control" })
+        <br />
+        <label>Kitap Sayfası</label>
+        @Html.TextBoxFor(k => k.SAYFA, new { @class = "form-control" })
+        <br />
+
+    </div>
+    <button class="btn btn-warning">Güncelle</button>
+    @*<input type="hidden" name="DURUM" value="True" />*@
+
+}
+

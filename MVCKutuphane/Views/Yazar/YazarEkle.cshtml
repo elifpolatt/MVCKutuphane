@@ -1,0 +1,24 @@
+﻿@model MVCKutuphane.Models.tblyazarlar
+@{
+    ViewBag.Title = "YazarEkle";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+<form class="form-group" method="post">
+    <br />
+    <div>
+        <label>Yazar Adı</label>
+        @Html.TextBoxFor(y => y.AD, new { @class = "form-control" })
+        @Html.ValidationMessageFor(y => y.AD, "", new { @style = "color:red" })
+        <br />
+        <label>Yazar Soyadı</label>
+        @Html.TextBoxFor(m => m.SOYAD, new { @class = "form-control" })
+        @Html.ValidationMessageFor(y => y.SOYAD)
+        <br />
+        <label>Yazar Detay</label>
+        @Html.TextBoxFor(m => m.DETAY, new { @class = "form-control" })
+        <button class="btn btn-info">Yazar Ekle</button>
+    </div>
+</form>
+

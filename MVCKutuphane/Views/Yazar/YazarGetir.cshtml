@@ -1,0 +1,25 @@
+﻿@model MVCKutuphane.Models.tblyazarlar
+@{
+    ViewBag.Title = "YazarGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("YazarGuncelle", "Yazar", FormMethod.Post))
+{
+    <div class="form-group">
+        <br />
+        <label>Yazar ID</label>
+        @Html.TextBoxFor(m => m.ID, new { @class = "form-control" })
+        <br />
+        <label>Yazar Adı</label>
+        @Html.TextBoxFor(m => m.AD, new { @class = "form-control" })
+        <br />
+        <label>Yazar Soyadı</label>
+        @Html.TextBoxFor(m => m.SOYAD, new { @class = "form-control" })
+        <br />
+        <label>Yazar Detayları</label>
+        @Html.TextAreaFor(m => m.DETAY, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-warning">Yazar Güncelle</button>
+    </div>
+}

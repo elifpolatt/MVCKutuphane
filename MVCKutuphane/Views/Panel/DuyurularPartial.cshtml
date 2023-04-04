@@ -1,0 +1,34 @@
+﻿
+
+@using MVCKutuphane.Models
+@model List<tblduyurular>
+
+
+    
+        @foreach (var item in Model)
+            {
+                <div class="post">
+                    <div class="user-block">
+                        <img src="~/admintema/dist/img/user8-128x128.jpg" />
+                        <span class="username">
+
+                            <b class="text-red">
+                                @item.KATEGORI
+                            </b>
+                        </span>
+
+                        <span class="description">@Convert.ToDateTime(@item.TARIH).ToString("dd-MMMM-yyyy")</span>
+
+                    </div>
+
+                <p>
+                    @item.ICERIK
+                </p>
+
+
+
+            </div>
+            }
+
+
+    
