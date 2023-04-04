@@ -65,8 +65,8 @@ namespace MVCKutuphane.Controllers
             var enaktifuye = db.EnAktifUye1().FirstOrDefault();
             var encokokunankitap = db.EnFazlaOkunanKitap1().FirstOrDefault();
             var encokkitabiolanyazar = db.EnFazlaKitabiOlanYazar1().FirstOrDefault();
-            var eniyiyayinevi = db.tblkitaplar.GroupBy(x => x.YAYINEVI).OrderByDescending
-                (z => z.Count()).Select(y => new { y.Key }).FirstOrDefault();
+             var eniyiyayinevi = db.tblkitaplar.GroupBy(x => x.YAYINEVI).OrderByDescending
+                (z => z.Count()).Select(y => y.Key).FirstOrDefault();
             var enbasarilipersonel = db.EnBasariliPersonel().FirstOrDefault();
             var mesajsayisi = db.tbliletisim.Count();
             var bugunverilenkitaplar = db.tblhareketler.Where(x => x.ALISTARIH == DateTime.Today).Select(y => y.KITAP).Count();
