@@ -50,7 +50,7 @@ duyurular ve kategoriler gibi tüm konular altında yönetim yapılabilir. Kitap
 ![image](https://user-images.githubusercontent.com/123379493/229765577-98411395-4455-4e79-8db5-f707998825da.png)
 ![image](https://user-images.githubusercontent.com/123379493/229765679-937ed6ba-120f-48c2-b462-801dc85eb42d.png)
 ![image](https://user-images.githubusercontent.com/123379493/229765794-5f22f5a9-2aa1-435e-9188-760e5b989dea.png)
-![image](https://user-images.githubusercontent.com/123379493/229766347-6fc021ec-9e84-47f0-90df-5450d2730740.png)
+![image](https://user-images.githubusercontent.com/123379493/229769731-721fc875-2959-4a86-9cd1-08e0e4fcf165.png)
 ![image](https://user-images.githubusercontent.com/123379493/229766402-4c4d8cd2-d062-4c2d-bf1c-86cc78e9f45b.png)
 ![image](https://user-images.githubusercontent.com/123379493/229766522-3a88a6bc-c27b-4eff-a012-b7baff511c01.png)
 
